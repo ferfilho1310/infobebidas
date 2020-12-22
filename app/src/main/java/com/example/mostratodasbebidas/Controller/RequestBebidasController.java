@@ -12,7 +12,7 @@ public class RequestBebidasController implements IBebidaController {
     private static IRequestDaoBebidas iRequestDaoBebidas;
 
 
-    public synchronized static RequestBebidasController getInstance(){
+    public static synchronized RequestBebidasController getInstance(){
         if(requestBebidasController == null){
             requestBebidasController = new RequestBebidasController();
         }
