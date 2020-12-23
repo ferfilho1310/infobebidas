@@ -80,24 +80,24 @@ public class BebidaListAdapter extends RecyclerView.Adapter<BebidaListAdapter.Be
     private Filter filtroBebidas = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
-            List<Bebida> filteredList = new ArrayList<>();
+            List<Bebida> filtroBebidaList = new ArrayList<>();
 
             if (constraint == null || constraint.length() == 0) {
-                filteredList.addAll(listaDeTodasBebidas);
+                filtroBebidaList.addAll(listaDeTodasBebidas);
             } else {
-                String filterPattern = constraint.toString().toLowerCase().trim();
+                String nomeBebidaDigitadoParaBusca = constraint.toString().toLowerCase().trim();
 
                 for (Bebida itemBebida : listaDeTodasBebidas) {
-                    if (itemBebida.getName().toLowerCase().contains(filterPattern)) {
-                        filteredList.add(itemBebida);
+                    if (itemBebida.getName().toLowerCase().contains(nomeBebidaDigitadoParaBusca)) {
+                        filtroBebidaList.add(itemBebida);
                     }
                 }
             }
 
-            FilterResults results = new FilterResults();
-            results.values = filteredList;
+            FilterResults listRetornadaAposFiltragem = new FilterResults();
+            listRetornadaAposFiltragem.values = filtroBebidaList;
 
-            return results;
+            return listRetornadaAposFiltragem;
         }
 
         @Override
