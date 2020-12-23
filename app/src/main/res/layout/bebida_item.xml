@@ -14,7 +14,10 @@
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
     android:layout_marginRight="5dp"
-    android:layout_marginLeft="5dp">
+    android:layout_marginLeft="5dp"
+    android:id="@+id/card_Bebidas"
+    android:clickable="true"
+    android:focusable="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,18 +35,34 @@
             android:src="@drawable/image_bebida" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nome_da_cerveja_txt"
+            android:layout_marginTop="8dp"
+            android:textColor="#70000000"
+            android:textStyle="bold"/>
+
+        <TextView
             android:id="@+id/txt_nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Brahma"
-            android:textColor="@color/black" />
+            android:text="@string/nome_cerveja"
+            android:textColor="#70000000"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teor_alco_lico_text"
+            android:layout_marginTop="8dp"
+            android:textColor="#70000000"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/txt_teor_alcoolico"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4.7%"
-            android:textColor="@color/black" />
+            android:text="@string/teor_alcoolico"
+            android:textColor="#70000000" />
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

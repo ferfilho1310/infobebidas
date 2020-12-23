@@ -1,11 +1,14 @@
 package com.example.mostratodasbebidas.Model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Bebida {
+public class Bebida implements Parcelable {
 
     @SerializedName("id")
     private Integer id;
@@ -35,6 +38,71 @@ public class Bebida {
     private Double ph;
     @SerializedName("attenuation_level")
     private Double attenuationLevel;
+
+    protected Bebida(Parcel in) {
+        if (in.readByte() == 0) {
+            id = null;
+        } else {
+            id = in.readInt();
+        }
+        name = in.readString();
+        tagline = in.readString();
+        firstBrewed = in.readString();
+        description = in.readString();
+        imageUrl = in.readString();
+        if (in.readByte() == 0) {
+            abv = null;
+        } else {
+            abv = in.readDouble();
+        }
+        if (in.readByte() == 0) {
+            ibu = null;
+        } else {
+            ibu = in.readDouble();
+        }
+        if (in.readByte() == 0) {
+            targetFg = null;
+        } else {
+            targetFg = in.readDouble();
+        }
+        if (in.readByte() == 0) {
+            targetOg = null;
+        } else {
+            targetOg = in.readDouble();
+        }
+        if (in.readByte() == 0) {
+            ebc = null;
+        } else {
+            ebc = in.readDouble();
+        }
+        if (in.readByte() == 0) {
+            srm = null;
+        } else {
+            srm = in.readDouble();
+        }
+        if (in.readByte() == 0) {
+            ph = null;
+        } else {
+            ph = in.readDouble();
+        }
+        if (in.readByte() == 0) {
+            attenuationLevel = null;
+        } else {
+            attenuationLevel = in.readDouble();
+        }
+    }
+
+    public static final Creator<Bebida> CREATOR = new Creator<Bebida>() {
+        @Override
+        public Bebida createFromParcel(Parcel in) {
+            return new Bebida(in);
+        }
+
+        @Override
+        public Bebida[] newArray(int size) {
+            return new Bebida[size];
+        }
+    };
 
     public Integer getId() {
         return id;
@@ -166,6 +234,74 @@ public class Bebida {
                 ", ph=" + ph +
                 ", attenuationLevel=" + attenuationLevel +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        if (id == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeInt(id);
+        }
+        dest.writeString(name);
+        dest.writeString(tagline);
+        dest.writeString(firstBrewed);
+        dest.writeString(description);
+        dest.writeString(imageUrl);
+        if (abv == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(abv);
+        }
+        if (ibu == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(ibu);
+        }
+        if (targetFg == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(targetFg);
+        }
+        if (targetOg == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(targetOg);
+        }
+        if (ebc == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(ebc);
+        }
+        if (srm == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(srm);
+        }
+        if (ph == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(ph);
+        }
+        if (attenuationLevel == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(attenuationLevel);
+        }
     }
 }
 

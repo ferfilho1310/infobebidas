@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">MostraTodasBebidas</string>
     <string name="informa_es_sobre_bebidas">Informações sobre bebidas</string>
+    <string name="loren_ipsun">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget nulla finibus arcu ultricies condimentum. Vivamus sit amet consectetur nulla. Duis posuere vitae libero non hendrerit. Mauris sed facilisis velit. Integer aliquam sapien ac sapien lobortis molestie et rhoncus erat. Aenean eu rutrum diam, eget porttitor sapien. Aenean ornare urna vitae dui imperdiet iaculis. Pellentesque dictum, est a vehicula sagittis, est enim dignissim quam, at blandit sapien mauris tincidunt felis. Sed laoreet ante non dui posuere congue. Nunc sed euismod nisl. In pellentesque ultricies turpis, vitae euismod neque feugiat ut. Aenean turpis massa, sagittis sagittis ex eget, lacinia fringilla eros. Phasellus vitae sollicitudin risus, a lobortis eros. Proin placerat magna se</string>
+    <string name="sobre_a_cerveja">Sobre a Cerveja</string>
+    <string name="escala_amargor">7,6</string>
+    <string name="escala_de_amargor_text">Escala de amargor</string>
+    <string name="teor_alcoolico">4,7</string>
+    <string name="teor_alco_lico_text">Teor Alcoólico</string>
+    <string name="slogan">Slogan</string>
+    <string name="slogan_da_marca_txt">Slogan da Marca</string>
+    <string name="nome_cerveja">Bhrama</string>
+    <string name="nome_da_cerveja_txt">Nome da Cerveja</string>
 </resources>
