@@ -14,7 +14,7 @@ import com.example.mostratodasbebidas.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
-public class DetalhesBebida extends AppCompatActivity implements View.OnClickListener {
+public class DetalhesBebidaActView extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView imgBebidaDetalhes;
     private TextView txtNomeCervejaBebida;
@@ -70,7 +70,7 @@ public class DetalhesBebida extends AppCompatActivity implements View.OnClickLis
     }
 
     private void voltarParaListaBebidas() {
-        Intent backListaBebidas = new Intent(DetalhesBebida.this, ListaBebidas.class);
+        Intent backListaBebidas = new Intent(DetalhesBebidaActView.this, ListaBebidasActView.class);
         startActivity(backListaBebidas);
     }
 }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#D3D3D3"
     android:orientation="vertical"
-    tools:context=".Activity.ListaBebidas">
+    tools:context=".Activity.ListaBebidasActView">
 
     <LinearLayout
         android:id="@+id/linearLayout"

@@ -22,7 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ListaBebidas extends AppCompatActivity {
+public class ListaBebidasActView extends AppCompatActivity {
 
     private RecyclerView rcBebidas;
     private GridLayoutManager llmBebidas;

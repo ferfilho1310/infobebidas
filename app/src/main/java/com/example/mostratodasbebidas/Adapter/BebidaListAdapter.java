@@ -14,13 +14,12 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mostratodasbebidas.Activity.DetalhesBebida;
+import com.example.mostratodasbebidas.Activity.DetalhesBebidaActView;
 import com.example.mostratodasbebidas.Model.Bebida;
 import com.example.mostratodasbebidas.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 
@@ -56,7 +55,7 @@ public class BebidaListAdapter extends RecyclerView.Adapter<BebidaListAdapter.Be
                 .into(holder.imgBebida);
 
         holder.cardBebidas.setOnClickListener(v -> {
-            Intent ibebidas = new Intent(context, DetalhesBebida.class);
+            Intent ibebidas = new Intent(context, DetalhesBebidaActView.class);
             ibebidas.putExtra("bebida", bebida);
             context.startActivity(ibebidas);
         });

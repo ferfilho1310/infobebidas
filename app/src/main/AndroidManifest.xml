@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MostraTodasBebidas">
         <activity
-            android:name=".Activity.DetalhesBebida"
+            android:name=".Activity.DetalhesBebidaActView"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".Activity.ListaBebidas"
+            android:name=".Activity.ListaBebidasActView"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
