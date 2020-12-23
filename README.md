@@ -17,5 +17,5 @@ Este aplicativo foi criado para vocês buscar informações sobre bebidas.
 
 * Informações detalhadas da bebiba
 
-<img src=""/>
+<img src="https://user-images.githubusercontent.com/37080995/102947660-93ccdf00-44a2-11eb-89be-cfec9fb0f037.jpg"/>
 
